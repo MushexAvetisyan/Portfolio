@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
@@ -8,12 +7,27 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: () => import("../pages/Home.vue")
   },
   {
     path: "/about",
     name: "About",
-    component: () => import("../views/About.vue"),
+    component: () => import("../pages/About.vue"),
+  },
+  {
+    path: "/Experience",
+    name: "Experience",
+    component: () => import("../pages/Experience.vue"),
+  },
+  {
+    path: "/Works",
+    name: "Works",
+    component: () => import("../pages/Works.vue"),
+  },
+  {
+    path: "/Contact",
+    name: "Contact",
+    component: () => import("../pages/Contact.vue"),
   },
 ];
 
