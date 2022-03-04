@@ -5,6 +5,7 @@ import store from './store'
 import VueParticles from 'vue-particles'
 
 
+
 Vue.config.productionTip = false
 Vue.use(VueParticles)
 
