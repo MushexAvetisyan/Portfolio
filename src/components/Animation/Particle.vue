@@ -1,13 +1,13 @@
 <template>
   <div class="Particle">
     <vue-particles
-        color="#72efdd"
+        color="#26de81"
         :particleOpacity="0.5"
-        :particlesNumber="80"
-        shapeType="edge"
+        :particlesNumber="50"
+        shapeType="polygon"
         :particleSize="5"
-        linesColor="#f7ede2"
-        :linesWidth="1"
+        linesColor="#b8e994"
+        :linesWidth="2"
         :lineLinked="true"
         :lineOpacity="0.5"
         :linesDistance="100"

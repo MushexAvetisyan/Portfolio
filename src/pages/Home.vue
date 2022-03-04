@@ -3,7 +3,6 @@
     <div class="main">
       <div class="content">
         <h1>Home</h1>
-        <h2>sd</h2>
       </div>
     </div>
     <Particle />
@@ -28,6 +27,8 @@ export default {
 .content{
   position: absolute;
   padding: 50px;
+  left: 0;
+  right: 0;
   h1{
     color: white;
   }
