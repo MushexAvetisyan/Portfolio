@@ -1,6 +1,10 @@
 <template>
   <div class="main">
-    <h1 class="effect">ERROR 404 <router-link to="/"><span class="effect2">Go Home Page</span></router-link></h1>
+    <div class="container">
+      <router-link to="/" class="neon1">Go Home Page</router-link>
+      <div class="neon">Error </div>
+      <div class="flux">404 </div>
+    </div>
   </div>
 </template>
 
@@ -12,108 +16,88 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
-
 .main {
-  font-family: "Exo 2", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  min-height: 100vh;
-  .effect {
-    font-size: 8rem;
-    font-weight: 200;
-    font-style: italic;
-    color: #fff;
-    padding: 4rem 6rem 5.5rem;
-    border: 0.4rem solid #fff;
-    border-radius: 2rem;
-    text-transform: uppercase;
-    animation: flicker 1.5s infinite alternate;
-    a {
-      text-decoration-line: none;
-      &.router-link-active{
-        height: auto;
-      }
-    }
-    .effect2{
-      position: relative;
-      bottom: 120px;
-      font-size: 30px;
-      font-weight: 200;
-      font-style: italic;
-      color: #fff;
-      padding: 1rem 2rem 1.5rem;
-      border: 0.4rem solid #fff;
-      border-radius: 3rem;
-      text-transform: uppercase;
-      -webkit-animation: flicker-data-v-d989eb38 1.5s infinite alternate;
-      animation: flicker-data-v-d989eb38 1.5s infinite alternate;
-      cursor: pointer;
-    }
-  }
-  .buttonStyle{
-    border: 0.4rem solid #fff;
-    background: none;
-    font-size: 8rem;
-    font-weight: 200;
-    font-style: italic;
-    color: #fff;
-    padding: 4rem 6rem 5.5rem;
-    border: 0.4rem solid #fff;
-    border-radius: 2rem;
-    text-transform: uppercase;
-    animation: flicker 1.5s infinite alternate;
-    cursor: pointer;
-    a {
-      color: #fff;
-      text-decoration-line: none;
-      &:hover {
-        color: #fff;
-        transition: 0.3s;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background-color: black;
+}
 
-      }
-    }
-  }
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
 
-  .effect::-moz-selection {
-    background-color: #08f;
-    color: #f40;
-  }
+.container {
+  text-align: center;
+  margin-top: 8%;
+}
 
-  .effect::selection {
-    background-color: #08f;
-    color: #f40;
-  }
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+.neon1{
+  font-family: neon;
+  color: #FB4264;
+  cursor: pointer;
+  font-size: 2vw;
+  line-height: 5vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
 
-  .effect:focus {
-    outline: none;
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+.neon1{
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
   }
 }
 
-/* Animate neon flicker */
-@keyframes flicker {
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
   0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
   100% {
-    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
-      0 0 2rem #f40, 0 0 4rem #f40, 0 0 6rem #f40, 0 0 8rem #f40, 0 0 10rem #f40;
-
-    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #08f,
-      inset 0 0 2rem #08f, 0 0 4rem #08f, inset 0 0 4rem #08f;
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
   }
-
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-    box-shadow: none;
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
   }
 }
 </style>
