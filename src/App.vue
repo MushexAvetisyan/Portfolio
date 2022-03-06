@@ -29,6 +29,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   overflow-x: hidden;
+  background-image: url("/assets/images/portfolio-background.png");
 }
 .fade-enter,
 .fade-leave-to {
@@ -37,6 +38,6 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 </style>

@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.contact{
+  height: 100vh;
+}
 </style>

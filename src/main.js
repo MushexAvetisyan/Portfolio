@@ -9,10 +9,12 @@ import { fas, faS } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
+import VueTypedJs from 'vue-typed-js'
 
 
 Vue.config.productionTip = false
 Vue.use(VueParticles)
+Vue.use(VueTypedJs)
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 library.add(fas);
 library.add(far);

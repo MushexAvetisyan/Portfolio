@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" class="menu-hover-fill">
     <ul>
       <li v-for="item in navBars" :key="item.id">
         <router-link :to="{ path: item.router }">{{

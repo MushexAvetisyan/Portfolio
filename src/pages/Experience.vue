@@ -14,5 +14,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.Experience{
+  height: 100vh;
+}
 </style>
