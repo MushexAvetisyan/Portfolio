@@ -18,7 +18,8 @@ export default {
       { names: "Home", router: "/", id: 1 },
       { names: "About", router: "/About", id: 2 },
       { names: "Experience", router: "/Experience", id: 3 },
-      { names: "Works", router: "/Works", id: 4 },
+      { names: "My Works", router: "/Works", id: 4 },
+      { names: "Skills", router: "/Skills", id: 5 },
       { names: "Contact", router: "/Contact", id: 5 },
     ],
   })

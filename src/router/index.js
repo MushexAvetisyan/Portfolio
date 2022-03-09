@@ -26,6 +26,11 @@ const routes = [
     name: "Contact",
     component: () => import("../pages/Contact.vue"),
   },
+  {
+    path: "/Skills",
+    name: "Skills",
+    component: () => import("../pages/Skills.vue"),
+  },
   { path: "*", name: "404", component: NotFound },
 ];
 
