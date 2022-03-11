@@ -1,6 +1,6 @@
 <template>
-  <div class="Works">
-    <h1>My Works</h1>
+  <div class="Skills">
+    <h1>Skills</h1>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.Works{
+.Skills{
   height: 100vh;
 }
 </style>
