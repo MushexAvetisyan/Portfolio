@@ -1,27 +1,16 @@
 <template>
   <div class="home">
     <div class="main">
-      <div class="content">
-        <vue-typed-js
-          :strings="['Creative', 'Smart', 'Different']"
-          :type-speed="50"
-          :start-delay="1000"
-          :back-speed="50"
-          :smart-backspace="true"
-          :back-delay="1500"
-          :loop="true"
-          :loop-count="1"
-          :show-cursor="true"
-        >
-          <h1 class="intro">Be <span class="typing"></span></h1>
-        </vue-typed-js>
-      </div>
-      <div class="about">
-        <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam,
-          tempore?
-        </p>
+      <div class="animated-title">
+        <div class="text-top">
+          <div>
+            <span>Mystery</span>
+            <span>attractive. </span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>is always</div>
+        </div>
       </div>
     </div>
   </div>
@@ -39,54 +28,70 @@ export default {
   background-image: url("../assets/images/portfolio-background.png");
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0 0;
-  grid-template-areas: ". .";
+  //display: grid;
+  //grid-auto-rows: 1fr;
+  //grid-template-columns: 1fr 1fr;
+  //grid-template-rows: 1fr;
+  //gap: 0 0;
+  //grid-template-areas: ". .";
 }
-.content {
-  margin-top: 130px;
-  h1 {
-    color: white;
-  }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
-.about {
-  text-align: left;
-  width: 50%;
-  height: 70px;
-  //background-color: white;
-  position: relative;
-  top: 130px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: width 0.9s, height 0.9s, transform 0.9s;
-  h2 {
-    color: white;
-    font-size: 35px;
-    padding: 10px;
-  }
-  p {
-    visibility: hidden;
-    opacity: 0;
-    color: white;
-    transition: visibility 0.3s, opacity 0.3s linear;
-    padding: 0 0 0 15px;
-  }
-  &:hover {
-    width: 50%;
-    height: 130px;
-    box-shadow: -4px -4px 7px #53a7ea, 4px 4px 7px #53a7ea, 4px 4px 4px #53a7ea;
-    transform: translateX(5px);
-    //transform: translate(50px);
-    p {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
-.intro {
-  font-size: 50px;
+.animated-title {
+  color: #222;
+  font-family: Roboto, Arial, sans-serif;
+  height: 90vmin;
+  left: 30%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 11vmin;
+  padding: 1vmin 0;
+  position: absolute;
+}
+.animated-title > div div span {
+  display: block;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  color: white;
+}
+.animated-title > div.text-top div span:nth-child(2) {
+  color: limegreen;
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText 2s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+  color: brown;
 }
 </style>
