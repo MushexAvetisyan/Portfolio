@@ -22,7 +22,7 @@ export default {
       { names: "Skills", router: "/Skills", id: 5 },
       { names: "Contact", router: "/Contact", id: 5 },
     ],
-  })
+  }),
 }
 </script>
 

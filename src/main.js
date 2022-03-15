@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import VueTypedJs from 'vue-typed-js'
+import firebase from "firebase/compat";
 
 
 Vue.config.productionTip = false
@@ -19,6 +20,20 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 library.add(fas);
 library.add(far);
 
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD66U2VhKfth09o2h8fphRYzD3ucVEtG8w",
+  authDomain: "my-world-1653d.firebaseapp.com",
+  projectId: "my-world-1653d",
+  storageBucket: "my-world-1653d.appspot.com",
+  messagingSenderId: "1011149450295",
+  appId: "1:1011149450295:web:3a25cdeb78102e8ebfe3b2",
+  measurementId: "G-G5GGJ89M6T"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
 
 new Vue({
   router,

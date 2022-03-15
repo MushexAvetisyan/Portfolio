@@ -31,6 +31,22 @@ const routes = [
     name: "Skills",
     component: () => import("../pages/Skills.vue"),
   },
+  {
+    path: "/Login",
+    name: "Login",
+    component: () => import("../pages/Login.vue")
+  },
+  {
+    path: "/Register",
+    name: "Register",
+    component: () => import("../pages/Register.vue")
+  },
+  {
+    path: "/ResetPassword",
+    name: "ResetPassword",
+    component: () =>
+      import("../pages/RessetPassword.vue"),
+  },
   { path: "*", name: "404", component: NotFound },
 ];
 
