@@ -47,5 +47,10 @@ export default {
   h1 {
     color: white;
   }
+  ::v-deep{
+    .typed-element{
+      display: block;
+    }
+  }
 }
 </style>

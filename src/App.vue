@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar/>
+    <NavBar />
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
@@ -13,13 +13,13 @@ export default {
   components: {
     NavBar,
   },
-  data: () => ({
-  }),
+  data: () => ({}),
 };
 </script>
 
 <style lang="scss">
 * {
+  font-family: 'Allerta Stencil';
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;

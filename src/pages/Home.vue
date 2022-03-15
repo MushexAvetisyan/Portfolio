@@ -28,12 +28,6 @@ export default {
   background-image: url("../assets/images/portfolio-background.png");
   width: 100%;
   height: 100vh;
-  //display: grid;
-  //grid-auto-rows: 1fr;
-  //grid-template-columns: 1fr 1fr;
-  //grid-template-rows: 1fr;
-  //gap: 0 0;
-  //grid-template-areas: ". .";
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
@@ -52,7 +46,7 @@ export default {
   height: 90vmin;
   left: 30%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   width: 90vmin;
 }
@@ -63,7 +57,7 @@ export default {
   width: 100%;
 }
 .animated-title > div div {
-  font-size: 11vmin;
+  font-size: 13vmin;
   padding: 1vmin 0;
   position: absolute;
 }

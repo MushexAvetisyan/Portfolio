@@ -37,7 +37,6 @@ export default {
     color: #f0efeb;
     text-decoration-line: none;
     &:hover {
-      color: crimson;
       transition: 0.3s;
       text-shadow: 0 0 1px limegreen, 0 0 1px gold;
     }
@@ -47,6 +46,7 @@ export default {
   }
   ul {
     display: flex;
+    justify-content: space-around;
     li {
       list-style-type: none;
     }
