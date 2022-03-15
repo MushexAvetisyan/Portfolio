@@ -34,17 +34,17 @@ const routes = [
   {
     path: "/Login",
     name: "Login",
-    component: () => import("../pages/Login.vue"),
-  },
-  {
-    path: "/Register",
-    name: "Register",
-    component: () => import("../pages/Register.vue"),
+    component: () => import("../components/Login/LoginForm.vue"),
   },
   {
     path: "/ResetPassword",
     name: "ResetPassword",
     component: () => import("../pages/RessetPassword.vue"),
+  },
+  {
+    path: "/Registration",
+    name: "Registration",
+    component: () => import("../components/Registration/Registration.vue")
   },
   { path: "*", name: "404", component: NotFound },
 ];

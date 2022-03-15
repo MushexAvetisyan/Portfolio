@@ -21,6 +21,7 @@ export default {
       { names: "My Works", router: "/Works", id: 4 },
       { names: "Skills", router: "/Skills", id: 5 },
       { names: "Contact", router: "/Contact", id: 5 },
+      { names: "Registration", router: "/Registration", id: 6}
     ],
   }),
 }
