@@ -11,7 +11,6 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import VueTypedJs from 'vue-typed-js'
 import firebase from "firebase/compat";
-import vuetify from './plugins/vuetify'
 
 
 Vue.config.productionTip = false
@@ -39,7 +38,6 @@ var database = firebase.database();
 new Vue({
   router,
   store,
-  vuetify,
   render: h => h(App)
 }).$mount('#app')
 

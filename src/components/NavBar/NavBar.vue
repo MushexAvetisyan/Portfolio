@@ -3,15 +3,18 @@
     <ul>
       <li v-for="item in navBars" :key="item.id">
         <router-link :to="{ path: item.router }">{{
-            item.names.toUpperCase()
-          }}</router-link>
+          item.names.toUpperCase()
+        }}</router-link>
       </li>
+      <RegistrationModal />
+      <LoginModal />
     </ul>
   </div>
 </template>
 
-
 <script>
+import LoginModal from "@/components/modals/LoginModal";
+import RegistrationModal from "@/components/modals/RegistrationModal";
 export default {
   data: () => ({
     navBars: [
@@ -21,10 +24,13 @@ export default {
       { names: "My Works", router: "/Works", id: 4 },
       { names: "Skills", router: "/Skills", id: 5 },
       { names: "Contact", router: "/Contact", id: 5 },
-      { names: "Registration", router: "/Registration", id: 6}
     ],
   }),
-}
+  components: {
+    RegistrationModal,
+    LoginModal
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -46,8 +52,12 @@ export default {
     }
   }
   ul {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr;
+    gap: 1px 30px;
+    grid-template-areas: ". . . . . . . .";
+    justify-items: stretch;
     li {
       list-style-type: none;
     }

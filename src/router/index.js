@@ -12,6 +12,11 @@ const routes = [
     component: () => import("../pages/About.vue"),
   },
   {
+    path: "/MyProfile",
+    name: "MyProfile",
+    component: () => import("../pages/MyProfile.vue")
+  },
+  {
     path: "/Experience",
     name: "Experience",
     component: () => import("../pages/Experience.vue"),
@@ -32,19 +37,9 @@ const routes = [
     component: () => import("../pages/Skills.vue"),
   },
   {
-    path: "/Login",
-    name: "Login",
-    component: () => import("../components/Login/LoginForm.vue"),
-  },
-  {
     path: "/ResetPassword",
     name: "ResetPassword",
     component: () => import("../pages/RessetPassword.vue"),
-  },
-  {
-    path: "/Registration",
-    name: "Registration",
-    component: () => import("../components/Registration/Registration.vue")
   },
   { path: "*", name: "404", component: NotFound },
 ];
