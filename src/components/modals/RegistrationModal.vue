@@ -10,19 +10,23 @@
             </div>
             <div class="inputbox">
               <input v-model="user.name" type="text" id="name" value="" autocomplete="off" required>
-              <span>Your name:</span>
+              <span>Name:</span>
             </div>
             <div class="inputbox">
               <input v-model="user.email" type="text" id="mail" value="" required>
-              <span>Your email:</span>
+              <span>Email:</span>
             </div>
             <div class="inputbox">
               <input v-model="user.password" type="text" id="password" value="" autocomplete="off" required>
-              <span>Your password:</span>
+              <span>Password:</span>
+            </div>
+            <div class="inputbox">
+              <input v-model="user.ConfirmPassword" type="text" id="ConfirmPassword" value="" autocomplete="off" required>
+              <span>Repeat Password:</span>
             </div>
 
             <div class="RegistrationButton">
-              <button @click="isShow = !isShow" type="submit" name="button">REGISTRATION</button>
+              <button type="submit" name="button">REGISTRATION</button>
               <p>
                 Already have an account? <LoginModal/>
               </p>
@@ -40,6 +44,7 @@ import SimpleModal from "simple-modal-vue";
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import LoginModal from "@/components/modals/LoginModal";
+import { required, sameAs, minLength } from 'vuelidate/lib/validators'
 export default {
   data: () => ({
     isShow: false,
@@ -47,8 +52,15 @@ export default {
       name: "",
       email: "",
       password: "",
+      ConfirmPassword: "",
     }
   }),
+  validations: {
+    password: {
+      required,
+      minLength: minLength(6)
+    },
+  },
   components: {
     LoginModal,
     SimpleModal

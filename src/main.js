@@ -11,11 +11,13 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import VueTypedJs from 'vue-typed-js'
 import firebase from "firebase/compat";
+import Vuelidate from 'vuelidate'
 
 
 Vue.config.productionTip = false
 Vue.use(VueParticles)
 Vue.use(VueTypedJs)
+Vue.use(Vuelidate)
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 library.add(fas);
 library.add(far);
