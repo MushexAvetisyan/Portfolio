@@ -31,11 +31,6 @@
               <button @click="isShow = !isShow" type="submit" class="Login">
                 LOGIN
               </button>
-              <router-link to="/Registration"
-              ><p @click="isShow = !isShow" class="RegNow">
-                Register Now!
-              </p></router-link
-              >
             </div>
             <div class="HelpLogin">
               <input type="checkbox" id="checkbox" v-model="checked" />

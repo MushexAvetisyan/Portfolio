@@ -1,6 +1,6 @@
 <template>
   <div class="modal">
-    <simple-modal v-model="isShow">
+    <simple-modal v-model="isRegModal">
       <template slot="body">
         <div class="Reg_div">
           <form @submit.prevent="userRegistration" class="FormRegistrastion">
@@ -27,15 +27,12 @@
 
             <div class="RegistrationButton">
               <button type="submit" name="button">REGISTRATION</button>
-              <p>
-                Already have an account? <LoginModal/>
-              </p>
             </div>
           </form>
         </div>
       </template>
     </simple-modal>
-    <button class="join" @click="isShow = !isShow">REGISTRATION</button>
+    <button class="join" @click="isRegModal = !isRegModal">REGISTRATION</button>
   </div>
 </template>
 
@@ -44,10 +41,9 @@ import SimpleModal from "simple-modal-vue";
 import firebase from "firebase/compat/app"
 import "firebase/compat/auth"
 import LoginModal from "@/components/modals/LoginModal";
-import { required, sameAs, minLength } from 'vuelidate/lib/validators'
 export default {
   data: () => ({
-    isShow: false,
+    isRegModal: false,
     user:{
       name: "",
       email: "",
@@ -55,12 +51,6 @@ export default {
       ConfirmPassword: "",
     }
   }),
-  validations: {
-    password: {
-      required,
-      minLength: minLength(6)
-    },
-  },
   components: {
     LoginModal,
     SimpleModal

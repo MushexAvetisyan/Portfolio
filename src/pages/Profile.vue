@@ -3,6 +3,7 @@
     <h3>Welcome</h3>
     <p>{{ user.displayName }}</p>
     <p>{{ user.email }}</p>
+    <p>You Are Not Registered</p>
 
     <button
       type="submit"

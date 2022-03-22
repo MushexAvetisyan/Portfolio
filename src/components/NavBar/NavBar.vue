@@ -19,9 +19,9 @@ export default {
   data: () => ({
     navBars: [
       { names: "Home", router: "/", id: 1 },
-      { names: "About", router: "/About", id: 2 },
-      { names: "Experience", router: "/Experience", id: 3 },
-      { names: "My Works", router: "/Works", id: 4 },
+      { names: "Albums", router: "/Albums", id: 2 },
+      { names: "Videos", router: "/Videos", id: 3 },
+      { names: "Music", router: "/Music", id: 4 },
       { names: "Skills", router: "/Skills", id: 5 },
       { names: "Contact", router: "/Contact", id: 5 },
     ],

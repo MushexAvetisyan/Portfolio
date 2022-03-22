@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import VueTypedJs from 'vue-typed-js'
 import firebase from "firebase/compat";
+import 'firebase/auth'
 import Vuelidate from 'vuelidate'
 
 
@@ -37,10 +38,17 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+let app
+
+firebase.auth().onAuthStateChanged(() => {
+  if(!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount('#app')
+  }
+})
+
 
 

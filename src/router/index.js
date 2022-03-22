@@ -7,24 +7,24 @@ Vue.use(VueRouter);
 const routes = [
   { path: "/", name: "Home", component: () => import("../pages/Home.vue") },
   {
-    path: "/about",
-    name: "About",
-    component: () => import("../pages/About.vue"),
+    path: "/Albums",
+    name: "Albums",
+    component: () => import("../pages/Albums.vue"),
   },
   {
-    path: "/MyProfile",
-    name: "MyProfile",
-    component: () => import("../pages/MyProfile.vue")
+    path: "/Videos",
+    name: "Videos",
+    component: () => import("../pages/Videos.vue")
   },
   {
-    path: "/Experience",
-    name: "Experience",
-    component: () => import("../pages/Experience.vue"),
+    path: "/Profile",
+    name: "Profile",
+    component: () => import("../pages/Profile.vue")
   },
   {
-    path: "/Works",
-    name: "Works",
-    component: () => import("../pages/Works.vue"),
+    path: "/Music",
+    name: "Music",
+    component: () => import("../pages/Music.vue"),
   },
   {
     path: "/Contact",
@@ -40,6 +40,11 @@ const routes = [
     path: "/ResetPassword",
     name: "ResetPassword",
     component: () => import("../pages/RessetPassword.vue"),
+  },
+  {
+    path: "/LoginModal",
+    name: "LoginModal",
+    component: () => import("../components/modals/LoginModal.vue")
   },
   { path: "*", name: "404", component: NotFound },
 ];
