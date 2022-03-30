@@ -1,19 +1,39 @@
 <template>
   <div id="app">
-    <NavBar />
-    <transition name="fade" mode="out-in">
-      <router-view />
+    <transition name="fade" v-if="show">
+      <div class="Welcome">
+        <HeartLoader :size="400" duration="2s" :color="'#d00000'" class="mm" />
+      </div>
     </transition>
+    <div v-show="LoaderOff">
+      <NavBar />
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
+import {HeartLoader} from "vue-spinners-css"
 import NavBar from "@/components/NavBar/NavBar";
 export default {
   components: {
     NavBar,
+    HeartLoader
   },
-  data: () => ({}),
+  data: () => ({
+    show: true,
+    LoaderOff: true,
+  }),
+  mounted() {
+    setTimeout(() => {
+      this.show = false;
+    }, 5000);
+    clearTimeout(() => {
+      this.LoaderOff = false;
+    });
+  },
 };
 </script>
 
@@ -32,6 +52,23 @@ export default {
   color: #2c3e50;
   overflow-x: hidden;
   background-image: url("/assets/images/portfolio-background.png");
+}
+.Welcome{
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+    .mm {
+      position: fixed;
+      top: 25%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 }
 .fade-enter,
 .fade-leave-to {

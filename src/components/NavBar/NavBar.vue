@@ -18,7 +18,7 @@ import RegistrationModal from "@/components/modals/RegistrationModal";
 export default {
   data: () => ({
     navBars: [
-      { names: "Home", router: "/", id: 1 },
+      { names: "Home", router: "/Home", id: 1 },
       { names: "Albums", router: "/Albums", id: 2 },
       { names: "Videos", router: "/Videos", id: 3 },
       { names: "Music", router: "/Music", id: 4 },
@@ -28,7 +28,7 @@ export default {
   }),
   components: {
     RegistrationModal,
-    LoginModal
+    LoginModal,
   },
 };
 </script>

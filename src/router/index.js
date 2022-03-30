@@ -5,7 +5,12 @@ import NotFound from "../pages/404.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", name: "Home", component: () => import("../pages/Home.vue") },
+  { path: "/", name: "Main", component: () => import("../pages/Main.vue") },
+  {
+    path: "/Home",
+    name: "Home",
+    component: () => import("../pages/Home.vue"),
+  },
   {
     path: "/Albums",
     name: "Albums",
@@ -14,12 +19,12 @@ const routes = [
   {
     path: "/Videos",
     name: "Videos",
-    component: () => import("../pages/Videos.vue")
+    component: () => import("../pages/Videos.vue"),
   },
   {
     path: "/Profile",
     name: "Profile",
-    component: () => import("../pages/Profile.vue")
+    component: () => import("../pages/Profile.vue"),
   },
   {
     path: "/Music",
@@ -44,7 +49,7 @@ const routes = [
   {
     path: "/LoginModal",
     name: "LoginModal",
-    component: () => import("../components/modals/LoginModal.vue")
+    component: () => import("../components/modals/LoginModal.vue"),
   },
   { path: "*", name: "404", component: NotFound },
 ];
