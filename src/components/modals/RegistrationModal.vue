@@ -9,8 +9,12 @@
               {{ error.message }}
             </div>
             <div class="inputbox">
-              <input v-model="user.name" type="text" id="name" value="" autocomplete="off" required>
-              <span>Name:</span>
+              <input v-model="user.FirstName" type="text" id="FirstName" value="" autocomplete="off" required>
+              <span>FirstName:</span>
+            </div>
+            <div class="inputbox">
+              <input v-model="user.LastName" type="text" id="LastName" value="" autocomplete="off" required>
+              <span>LastName:</span>
             </div>
             <div class="inputbox">
               <input v-model="user.email" type="text" id="mail" value="" required>
@@ -45,7 +49,8 @@ export default {
   data: () => ({
     isRegModal: false,
     user:{
-      name: "",
+      FirstName: "",
+      LastName: "",
       email: "",
       password: "",
       ConfirmPassword: "",
@@ -63,10 +68,11 @@ export default {
         .then((res) => {
           res.user
             .updateProfile({
-              displayName: this.user.name,
+              displayFirstName: this.user.FirstName,
+              displayLastName: this.user.LastName,
             })
             .then(() => {
-              this.$router.push("/MyProfile")
+              this.$router.push("/Profile")
             });
         })
         .catch((error) => {

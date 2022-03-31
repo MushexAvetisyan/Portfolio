@@ -1,9 +1,9 @@
 <template>
   <div class="MyProfile">
-    <h3>Welcome</h3>
-    <p>{{ user.displayName }}</p>
-    <p>{{ user.email }}</p>
-    <p>You Are Not Registered</p>
+    <div class="main">
+      <h3>Welcome</h3>
+      <p>{{ user.displayFirstName }} {{user.displayLastName}}</p>
+    </div>
 
     <button
       type="submit"
@@ -47,5 +47,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.MyProfile{
+  background-image: url("../assets/images/portfolio-background.png");
+  width: 100%;
+  height: 100vh;
+}
+.main{
+  padding-top: 20px;
+  h3{
+    color: white;
+    font-size: 30px;
+  }
+}
 </style>
