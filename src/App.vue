@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade" v-if="show">
       <div class="Welcome">
-        <HeartLoader :size="400" duration="2s" :color="'#d00000'" class="mm" />
+        <OrbitalsLoader :size="400" duration="2s" :color="'#76DF00'" class="mm" />
       </div>
     </transition>
     <div v-show="LoaderOff">
@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import {HeartLoader} from "vue-spinners-css"
+import {OrbitalsLoader} from "vue-spinners-css"
 import NavBar from "@/components/NavBar/NavBar";
 export default {
   components: {
     NavBar,
-    HeartLoader
+    OrbitalsLoader
   },
   data: () => ({
     show: true,
