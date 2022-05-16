@@ -26,9 +26,10 @@ export default {
 
 <style scoped lang="scss">
 .main {
-  background-image: url("../assets/images/portfolio-background.png");
+  //background-image: url("../assets/images/portfolio-background.png");
   width: 100%;
   height: 100vh;
+  background-color: #0A192F;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
@@ -56,9 +57,9 @@ export default {
   color: #222;
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
-  left: 30%;
+  left: 35%;
   position: absolute;
-  top: 55%;
+  top: 60%;
   transform: translate(-50%, -50%);
   width: 90vmin;
 }
@@ -77,10 +78,10 @@ export default {
   display: block;
 }
 .animated-title > div.text-top div {
-  animation: showTopText 4s;
-  animation-delay: 0.5s;
+  animation: showTopText 8s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
-  bottom: 0;
+  bottom: 16px;
   transform: translate(0, 100%);
 }
 .animated-title > div.text-top div span:first-child {
@@ -88,15 +89,16 @@ export default {
 }
 .animated-title > div.text-top div span:nth-child(2) {
   color: limegreen;
+  margin-top: 10px;
 }
 .animated-title > div.text-bottom {
   bottom: 0;
 }
 .animated-title > div.text-bottom div {
-  animation: showBottomText 2s;
-  animation-delay: 1.75s;
+  animation: showBottomText 6s;
+  animation-delay: 4.75s;
   animation-fill-mode: forwards;
-  top: 0;
+  top: -20px;
   transform: translate(0, -100%);
   color: brown;
 }

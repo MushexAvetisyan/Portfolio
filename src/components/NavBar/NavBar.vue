@@ -1,6 +1,6 @@
 <template>
   <div id="nav" class="menu-hover-fill">
-    <ul>
+    <ol start="0">
       <li v-for="item in navBars" :key="item.id">
         <router-link :to="{ path: item.router }">{{
           item.names.toUpperCase()
@@ -8,7 +8,7 @@
       </li>
       <RegistrationModal />
       <LoginModal />
-    </ul>
+    </ol>
   </div>
 </template>
 
@@ -35,10 +35,11 @@ export default {
 
 <style scoped lang="scss">
 #nav {
-  background-image: url("../../assets/images/portfolio-background.png");
+  //background-image: url("../../assets/images/portfolio-background.png");
   width: 100%;
   padding: 30px;
   margin: 0;
+  background-color: #0A192F;
   a {
     font-weight: bold;
     color: #f0efeb;
@@ -51,7 +52,7 @@ export default {
       color: #42b983;
     }
   }
-  ul {
+  ol {
     display: grid;
     grid-template-columns: 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.4fr 0.1fr 0.1fr;
     grid-template-rows: 0.1fr;
@@ -59,7 +60,7 @@ export default {
     grid-template-areas: ". . . . . . . .";
     justify-items: stretch;
     li {
-      list-style-type: none;
+      //list-style-type: none;
     }
   }
 }

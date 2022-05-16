@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade" v-if="show">
       <div class="Welcome">
-        <HeartLoader :size="400" duration="2s" :color="'#d00000'" class="mm" />
+        <CircleLoader :size="150" duration="6s" :color="'#CCD6F6'" class="mm" />
       </div>
     </transition>
     <div v-show="LoaderOff">
@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import {HeartLoader} from "vue-spinners-css"
+import {CircleLoader} from "vue-spinners-css";
 import NavBar from "@/components/NavBar/NavBar";
 export default {
   components: {
     NavBar,
-    HeartLoader
+    CircleLoader
   },
   data: () => ({
     show: true,
@@ -29,7 +29,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.show = false;
-    }, 5000);
+    }, 2000);
     clearTimeout(() => {
       this.LoaderOff = false;
     });
@@ -38,8 +38,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 * {
-  font-family: 'Lora', serif;
+  font-family: 'Comfortaa', cursive;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -55,7 +56,7 @@ export default {
 }
 .Welcome{
   height: 100vh;
-  background-color: black;
+  background-color: #0A192F;
   position: fixed;
   z-index: 100;
   left: 0;
@@ -64,8 +65,8 @@ export default {
   bottom: 0;
     .mm {
       position: fixed;
-      top: 25%;
-      left: 0;
+      top: 40%;
+      left: 45%;
       right: 0;
       bottom: 0;
     }

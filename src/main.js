@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import VueTypedJs from 'vue-typed-js'
 import firebase from "firebase/compat";
-import 'firebase/auth'
+import 'firebase/auth';
 import Vuelidate from 'vuelidate'
 
 
