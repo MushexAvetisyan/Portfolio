@@ -1,16 +1,34 @@
 <template>
   <div class="home">
     <div class="main">
-      <div class="animated-title">
-        <div class="text-top">
-          <div>
-            <span>Mystery</span>
-            <span>attractive. </span>
-          </div>
-        </div>
-        <div class="text-bottom">
-          <div>is always</div>
-        </div>
+<!--      <div class="animated-title">-->
+<!--        <div class="text-top">-->
+<!--          <div>-->
+<!--            <span>Prove</span>-->
+<!--            <span>Wrong </span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="text-bottom">-->
+<!--          <div>Them</div>-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="TypedContent">
+        <vue-typed-js
+            :strings="['Mushex', 'Full Stack Web Developer', 'Penetration Tester', 'Gray Hat Hacker']"
+            :type-speed="30"
+            :start-delay="3000"
+            :back-speed="30"
+            :smart-backspace="true"
+            :back-delay="1500"
+            :loop="true"
+            :loop-count="10"
+            :show-cursor="true"
+        >
+          <h1 class="intro">Hey I`am <span class="typing"></span></h1>
+        </vue-typed-js>
+      </div>
+      <div class="circle">
+        <img src='../assets/images/MyPhoto.jpg' alt=''>
       </div>
     </div>
   </div>
@@ -26,10 +44,15 @@ export default {
 
 <style scoped lang="scss">
 .main {
-  //background-image: url("../assets/images/portfolio-background.png");
   width: 100%;
   height: 100vh;
   background-color: #0A192F;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 0;
+  grid-template-areas: ". .";
 }
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
@@ -57,9 +80,9 @@ export default {
   color: #222;
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
-  left: 35%;
+  left: 25%;
   position: absolute;
-  top: 60%;
+  top: 45%;
   transform: translate(-50%, -50%);
   width: 90vmin;
 }
@@ -95,11 +118,52 @@ export default {
   bottom: 0;
 }
 .animated-title > div.text-bottom div {
-  animation: showBottomText 6s;
+  animation: showBottomText 4s;
   animation-delay: 4.75s;
   animation-fill-mode: forwards;
   top: -20px;
   transform: translate(0, -100%);
-  color: brown;
+  color: limegreen;
+}
+.TypedContent{
+  margin-top: 15%;
+  position: relative;
+  left: 5%;
+  h1 {
+    color: white;
+  }
+  ::v-deep{
+    .typed-element{
+      display: block;
+    }
+  }
+  .typing{
+    color: red;
+  }
+}
+
+.circle {
+  background: plum;
+  width: 300px;
+  height: 300px;
+  margin-top: 10%;
+  border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
+  overflow: hidden;
+  -webkit-animation: morph-data-v-5a90ec03 3s linear infinite;
+  animation: morph-data-v-5a90ec03 3s linear infinite;
+}
+.circle img {
+  width: 100%;
+}
+@keyframes morph{
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
 }
 </style>

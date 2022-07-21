@@ -1,19 +1,7 @@
 <template>
   <div class="About">
     <div class="content">
-      <vue-typed-js
-          :strings="['Creative', 'Smart', 'Different']"
-          :type-speed="50"
-          :start-delay="1000"
-          :back-speed="50"
-          :smart-backspace="true"
-          :back-delay="1500"
-          :loop="true"
-          :loop-count="1"
-          :show-cursor="true"
-      >
-        <h1 class="intro">Be <span class="typing"></span></h1>
-      </vue-typed-js>
+
     </div>
   </div>
 </template>

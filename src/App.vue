@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade" v-if="show">
       <div class="Welcome">
-        <CircleLoader :size="150" duration="6s" :color="'#CCD6F6'" class="mm" />
+        <CircleLoader :size="200" duration="3s" :color="'#CCD6F6'" class="mm" />
       </div>
     </transition>
     <div v-show="LoaderOff">
@@ -23,13 +23,13 @@ export default {
     CircleLoader
   },
   data: () => ({
-    show: true,
+    show: false,
     LoaderOff: true,
   }),
   mounted() {
     setTimeout(() => {
       this.show = false;
-    }, 2000);
+    }, 1000);
     clearTimeout(() => {
       this.LoaderOff = false;
     });

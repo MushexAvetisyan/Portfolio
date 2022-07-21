@@ -6,15 +6,11 @@
           item.names.toUpperCase()
         }}</router-link>
       </li>
-      <RegistrationModal />
-      <LoginModal />
     </ol>
   </div>
 </template>
 
 <script>
-import LoginModal from "@/components/modals/LoginModal";
-import RegistrationModal from "@/components/modals/RegistrationModal";
 export default {
   data: () => ({
     navBars: [
@@ -27,8 +23,6 @@ export default {
     ],
   }),
   components: {
-    RegistrationModal,
-    LoginModal,
   },
 };
 </script>
@@ -60,7 +54,7 @@ export default {
     grid-template-areas: ". . . . . . . .";
     justify-items: stretch;
     li {
-      //list-style-type: none;
+      list-style-type: none;
     }
   }
 }

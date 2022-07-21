@@ -41,16 +41,6 @@ const routes = [
     name: "Skills",
     component: () => import("../pages/Skills.vue"),
   },
-  {
-    path: "/ResetPassword",
-    name: "ResetPassword",
-    component: () => import("../pages/RessetPassword.vue"),
-  },
-  {
-    path: "/LoginModal",
-    name: "LoginModal",
-    component: () => import("../components/modals/LoginModal.vue"),
-  },
   { path: "*", name: "404", component: NotFound },
 ];
 
