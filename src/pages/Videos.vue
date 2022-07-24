@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="videos">
 
   </div>
 </template>
@@ -14,5 +14,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.videos{
+  background: #0f3854;
+  background: radial-gradient(ellipse at center, #0a2e38 25%, #000000 105%);
+  background-size: 100%;
+}
 </style>

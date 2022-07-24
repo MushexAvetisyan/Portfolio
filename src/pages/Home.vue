@@ -1,22 +1,11 @@
 <template>
   <div class="home">
     <div class="main">
-<!--      <div class="animated-title">-->
-<!--        <div class="text-top">-->
-<!--          <div>-->
-<!--            <span>Prove</span>-->
-<!--            <span>Wrong </span>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="text-bottom">-->
-<!--          <div>Them</div>-->
-<!--        </div>-->
-<!--      </div>-->
       <div class="TypedContent">
         <vue-typed-js
-            :strings="['Mushex', 'Full Stack Web Developer', 'Penetration Tester', 'Gray Hat Hacker']"
-            :type-speed="30"
-            :start-delay="3000"
+            :strings="['Mushex', 'Full Stack Web Developer', 'Penetration Tester']"
+            :type-speed="50"
+            :start-delay="4000"
             :back-speed="30"
             :smart-backspace="true"
             :back-delay="1500"
@@ -46,7 +35,9 @@ export default {
 .main {
   width: 100%;
   height: 100vh;
-  background-color: #0A192F;
+  background: #0f3854;
+  background: radial-gradient(ellipse at center, #0a2e38 25%, #000000 105%);
+  background-size: 100%;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -144,8 +135,8 @@ export default {
 
 .circle {
   background: plum;
-  width: 300px;
-  height: 300px;
+  width: 220px;
+  height: 220px;
   margin-top: 10%;
   border-radius: 40% 60% 70% 30%/40% 50% 60% 50%;
   overflow: hidden;

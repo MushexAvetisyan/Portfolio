@@ -1,9 +1,17 @@
 <template>
   <div id="app">
     <transition name="fade" v-if="show">
-      <div class="Welcome">
-        <CircleLoader :size="200" duration="3s" :color="'#CCD6F6'" class="mm" />
-      </div>
+        <div class="loading">
+          <div class="loading-text">
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">A</span>
+            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">G</span>
+          </div>
+        </div>
     </transition>
     <div v-show="LoaderOff">
       <NavBar />
@@ -23,15 +31,15 @@ export default {
     CircleLoader
   },
   data: () => ({
-    show: false,
+    show: true,
     LoaderOff: true,
   }),
   mounted() {
     setTimeout(() => {
       this.show = false;
-    }, 1000);
+    }, 3000);
     clearTimeout(() => {
-      this.LoaderOff = false;
+      this.LoaderOff = true;
     });
   },
 };
@@ -40,7 +48,7 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 * {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Quattrocento Sans', sans-serif;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -79,5 +87,51 @@ export default {
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s ease;
+}
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+@mixin position-center($text-align: center) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: $text-align;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+}
+
+.loading-text {
+  @include position-center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  span {
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 50px;
+    @for $i from 0 through 6 {
+      &:nth-child(#{$i + 1}) {
+        filter: blur(0px);
+        animation: blur-text 1.5s (#{$i/5})+s infinite linear alternate;
+      }
+    }
+  }
+}
+
+@keyframes blur-text {
+  0% {filter: blur(0px);}
+  100% {filter: blur(6px);}
 }
 </style>
