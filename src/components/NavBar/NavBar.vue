@@ -38,13 +38,13 @@ export default {
       { names: "Contact", router: "/Contact", id: 7 },
     ],
     days: [
-      {text:"sun", active: false},
-      {text:"mon", active: false},
-      {text:"tue", active: false},
-      {text:"wed", active: false},
-      {text:"thu", active: false},
-      {text:"fri", active: false},
-      {text:"sat", active: false}
+      {text:"Sun", active: false},
+      {text:"Mon", active: false},
+      {text:"Tue", active: false},
+      {text:"Wed", active: false},
+      {text:"Thu", active: false},
+      {text:"Fri", active: false},
+      {text:"Sat", active: false}
     ],
     months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     ampm:'',
@@ -59,10 +59,10 @@ export default {
   },
   methods: {
     startClock:function(){
-      var THIS = this;
+      let THIS = this;
 
       setInterval(function () {
-        var a = new Date().getTime() / 1e3,
+        let a = new Date().getTime() / 1e3,
             b = new Date,
             c = b.getHours(),
             d = b.getMinutes(),
@@ -101,20 +101,18 @@ $paleturquoise:#afeeee;
 $backgroundDark:#222222;
 $grey:#444444;
 #nav {
-  //background-image: url("../../assets/images/portfolio-background.png");
   width: 100%;
-  padding: 30px;
   margin: 0;
   background: black;
-  //background: radial-gradient(ellipse at center, #0a2e38 25%, #000000 105%)/;
   background-size: 100%;
   a {
     font-weight: bold;
     color: #f0efeb;
     text-decoration-line: none;
     &:hover {
-      transition: 0.3s;
       text-shadow: 0 0 1px #0a2e38, 0 0 1px red;
+      color: red;
+      transition: 0.7s;
     }
     &.router-link-exact-active {
       color: red;
@@ -157,7 +155,7 @@ $grey:#444444;
     align-items: center;
     justify-content: center;
     position: relative;
-    left: 5px;
+    left: 15px;
   }
   .days {
     flex: 1;
