@@ -167,7 +167,7 @@ export default {
   height: 50px;
   font-size: 15px;
   font-family: "Bebas Neue", cursive;
-  background: linear-gradient(45deg, transparent 5%, black 5%);
+  background: none;
   border: 0;
   color: #fff;
   letter-spacing: 3px;
@@ -176,7 +176,7 @@ export default {
   position: relative;
   cursor: pointer;
   left: 350px;
-  bottom: 70%;
+  bottom: 71%;
 }
 
 .contactMe::after {
